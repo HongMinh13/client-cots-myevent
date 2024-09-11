@@ -1339,15 +1339,151 @@ export type ConfirmContractDepositMutationFn = Apollo.MutationFunction<ConfirmCo
  *   },
  * });
  */
-export function usePresignedUrlS3Mutation(baseOptions?: Apollo.MutationHookOptions<PresignedUrlS3Mutation, PresignedUrlS3MutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useMutation<PresignedUrlS3Mutation, PresignedUrlS3MutationVariables>(PresignedUrlS3Document, options);
-      }
-export type PresignedUrlS3MutationHookResult = ReturnType<typeof usePresignedUrlS3Mutation>;
-export type PresignedUrlS3MutationResult = Apollo.MutationResult<PresignedUrlS3Mutation>;
-export type PresignedUrlS3MutationOptions = Apollo.BaseMutationOptions<PresignedUrlS3Mutation, PresignedUrlS3MutationVariables>;
-export const PresignedUrlS3PublicDocument = gql`
-    mutation presignedUrlS3Public($presignedUrlDto: PresignedUrlDto!) {
+export function useConfirmContractDepositMutation(baseOptions?: Apollo.MutationHookOptions<ConfirmContractDepositMutation, ConfirmContractDepositMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<ConfirmContractDepositMutation, ConfirmContractDepositMutationVariables>(ConfirmContractDepositDocument, options);
+}
+export type ConfirmContractDepositMutationHookResult = ReturnType<typeof useConfirmContractDepositMutation>;
+export type ConfirmContractDepositMutationResult = Apollo.MutationResult<ConfirmContractDepositMutation>;
+export type ConfirmContractDepositMutationOptions = Apollo.BaseMutationOptions<ConfirmContractDepositMutation, ConfirmContractDepositMutationVariables>;
+export const CreateDeviceDocument = gql`
+    mutation CreateDevice($input: CreateDeviceRequest!) {
+  createDevice(input: $input) {
+    message
+    success
+  }
+}
+    `;
+export type CreateDeviceMutationFn = Apollo.MutationFunction<CreateDeviceMutation, CreateDeviceMutationVariables>;
+
+/**
+ * __useCreateDeviceMutation__
+ *
+ * To run a mutation, you first call `useCreateDeviceMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateDeviceMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createDeviceMutation, { data, loading, error }] = useCreateDeviceMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useCreateDeviceMutation(baseOptions?: Apollo.MutationHookOptions<CreateDeviceMutation, CreateDeviceMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<CreateDeviceMutation, CreateDeviceMutationVariables>(CreateDeviceDocument, options);
+}
+export type CreateDeviceMutationHookResult = ReturnType<typeof useCreateDeviceMutation>;
+export type CreateDeviceMutationResult = Apollo.MutationResult<CreateDeviceMutation>;
+export type CreateDeviceMutationOptions = Apollo.BaseMutationOptions<CreateDeviceMutation, CreateDeviceMutationVariables>;
+export const CreateEventTypeDocument = gql`
+    mutation CreateEventType($input: CreateEventTypeRequest!) {
+  createEventType(input: $input) {
+    message
+    success
+  }
+}
+    `;
+export type CreateEventTypeMutationFn = Apollo.MutationFunction<CreateEventTypeMutation, CreateEventTypeMutationVariables>;
+
+/**
+ * __useCreateEventTypeMutation__
+ *
+ * To run a mutation, you first call `useCreateEventTypeMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateEventTypeMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createEventTypeMutation, { data, loading, error }] = useCreateEventTypeMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useCreateEventTypeMutation(baseOptions?: Apollo.MutationHookOptions<CreateEventTypeMutation, CreateEventTypeMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<CreateEventTypeMutation, CreateEventTypeMutationVariables>(CreateEventTypeDocument, options);
+}
+export type CreateEventTypeMutationHookResult = ReturnType<typeof useCreateEventTypeMutation>;
+export type CreateEventTypeMutationResult = Apollo.MutationResult<CreateEventTypeMutation>;
+export type CreateEventTypeMutationOptions = Apollo.BaseMutationOptions<CreateEventTypeMutation, CreateEventTypeMutationVariables>;
+export const CreateHumanResourceDocument = gql`
+    mutation CreateHumanResource($input: CreateHumanResourcesRequest!) {
+  createHumanResource(input: $input) {
+    message
+    success
+  }
+}
+    `;
+export type CreateHumanResourceMutationFn = Apollo.MutationFunction<CreateHumanResourceMutation, CreateHumanResourceMutationVariables>;
+
+/**
+ * __useCreateHumanResourceMutation__
+ *
+ * To run a mutation, you first call `useCreateHumanResourceMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateHumanResourceMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createHumanResourceMutation, { data, loading, error }] = useCreateHumanResourceMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useCreateHumanResourceMutation(baseOptions?: Apollo.MutationHookOptions<CreateHumanResourceMutation, CreateHumanResourceMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<CreateHumanResourceMutation, CreateHumanResourceMutationVariables>(CreateHumanResourceDocument, options);
+}
+export type CreateHumanResourceMutationHookResult = ReturnType<typeof useCreateHumanResourceMutation>;
+export type CreateHumanResourceMutationResult = Apollo.MutationResult<CreateHumanResourceMutation>;
+export type CreateHumanResourceMutationOptions = Apollo.BaseMutationOptions<CreateHumanResourceMutation, CreateHumanResourceMutationVariables>;
+export const CreateLocationDocument = gql`
+    mutation CreateLocation($input: CreateLocationRequest!) {
+  createLocation(input: $input) {
+    message
+    success
+  }
+}
+    `;
+export type CreateLocationMutationFn = Apollo.MutationFunction<CreateLocationMutation, CreateLocationMutationVariables>;
+
+/**
+ * __useCreateLocationMutation__
+ *
+ * To run a mutation, you first call `useCreateLocationMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateLocationMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createLocationMutation, { data, loading, error }] = useCreateLocationMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useCreateLocationMutation(baseOptions?: Apollo.MutationHookOptions<CreateLocationMutation, CreateLocationMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<CreateLocationMutation, CreateLocationMutationVariables>(CreateLocationDocument, options);
+}
+export type CreateLocationMutationHookResult = ReturnType<typeof useCreateLocationMutation>;
+export type CreateLocationMutationResult = Apollo.MutationResult<CreateLocationMutation>;
+export type CreateLocationMutationOptions = Apollo.BaseMutationOptions<CreateLocationMutation, CreateLocationMutationVariables>;
+export const PresignedUrlS3Document = gql`
+    mutation PresignedUrlS3($presignedUrlDto: PresignedUrlDto!) {
   presignedUrlS3(presignedUrlDto: $presignedUrlDto) {
     fileType
     pathFile
@@ -1374,13 +1510,13 @@ export type PresignedUrlS3MutationFn = Apollo.MutationFunction<PresignedUrlS3Mut
  *   },
  * });
  */
-export function usePresignedUrlS3PublicMutation(baseOptions?: Apollo.MutationHookOptions<PresignedUrlS3PublicMutation, PresignedUrlS3PublicMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useMutation<PresignedUrlS3PublicMutation, PresignedUrlS3PublicMutationVariables>(PresignedUrlS3PublicDocument, options);
-      }
-export type PresignedUrlS3PublicMutationHookResult = ReturnType<typeof usePresignedUrlS3PublicMutation>;
-export type PresignedUrlS3PublicMutationResult = Apollo.MutationResult<PresignedUrlS3PublicMutation>;
-export type PresignedUrlS3PublicMutationOptions = Apollo.BaseMutationOptions<PresignedUrlS3PublicMutation, PresignedUrlS3PublicMutationVariables>;
+export function usePresignedUrlS3Mutation(baseOptions?: Apollo.MutationHookOptions<PresignedUrlS3Mutation, PresignedUrlS3MutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<PresignedUrlS3Mutation, PresignedUrlS3MutationVariables>(PresignedUrlS3Document, options);
+}
+export type PresignedUrlS3MutationHookResult = ReturnType<typeof usePresignedUrlS3Mutation>;
+export type PresignedUrlS3MutationResult = Apollo.MutationResult<PresignedUrlS3Mutation>;
+export type PresignedUrlS3MutationOptions = Apollo.BaseMutationOptions<PresignedUrlS3Mutation, PresignedUrlS3MutationVariables>;
 export const RefreshTokenDocument = gql`
     mutation refreshToken($input: RefreshTokenDto!) {
   refreshToken(input: $input) {
@@ -1414,6 +1550,71 @@ export function useRefreshTokenMutation(baseOptions?: Apollo.MutationHookOptions
 export type RefreshTokenMutationHookResult = ReturnType<typeof useRefreshTokenMutation>;
 export type RefreshTokenMutationResult = Apollo.MutationResult<RefreshTokenMutation>;
 export type RefreshTokenMutationOptions = Apollo.BaseMutationOptions<RefreshTokenMutation, RefreshTokenMutationVariables>;
+export const RentalServicesDocument = gql`
+    mutation RentalServices($input: RentalServicesRequest!) {
+  rentalServices(input: $input) {
+    message
+    success
+  }
+}
+    `;
+export type RentalServicesMutationFn = Apollo.MutationFunction<RentalServicesMutation, RentalServicesMutationVariables>;
+
+/**
+ * __useRentalServicesMutation__
+ *
+ * To run a mutation, you first call `useRentalServicesMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRentalServicesMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [rentalServicesMutation, { data, loading, error }] = useRentalServicesMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useRentalServicesMutation(baseOptions?: Apollo.MutationHookOptions<RentalServicesMutation, RentalServicesMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<RentalServicesMutation, RentalServicesMutationVariables>(RentalServicesDocument, options);
+}
+export type RentalServicesMutationHookResult = ReturnType<typeof useRentalServicesMutation>;
+export type RentalServicesMutationResult = Apollo.MutationResult<RentalServicesMutation>;
+export type RentalServicesMutationOptions = Apollo.BaseMutationOptions<RentalServicesMutation, RentalServicesMutationVariables>;
+export const SendEmailDocument = gql`
+    mutation SendEmail($input: SendEmailRequest!) {
+  sendEmail(input: $input)
+}
+    `;
+export type SendEmailMutationFn = Apollo.MutationFunction<SendEmailMutation, SendEmailMutationVariables>;
+
+/**
+ * __useSendEmailMutation__
+ *
+ * To run a mutation, you first call `useSendEmailMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useSendEmailMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [sendEmailMutation, { data, loading, error }] = useSendEmailMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useSendEmailMutation(baseOptions?: Apollo.MutationHookOptions<SendEmailMutation, SendEmailMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<SendEmailMutation, SendEmailMutationVariables>(SendEmailDocument, options);
+}
+export type SendEmailMutationHookResult = ReturnType<typeof useSendEmailMutation>;
+export type SendEmailMutationResult = Apollo.MutationResult<SendEmailMutation>;
+export type SendEmailMutationOptions = Apollo.BaseMutationOptions<SendEmailMutation, SendEmailMutationVariables>;
 export const SignInDocument = gql`
     mutation signIn($input: SignInDto!) {
   signIn(input: $input) {
@@ -1488,6 +1689,98 @@ export function useSignUpMutation(baseOptions?: Apollo.MutationHookOptions<SignU
 export type SignUpMutationHookResult = ReturnType<typeof useSignUpMutation>;
 export type SignUpMutationResult = Apollo.MutationResult<SignUpMutation>;
 export type SignUpMutationOptions = Apollo.BaseMutationOptions<SignUpMutation, SignUpMutationVariables>;
+export const UpdateStatusContractDocument = gql`
+    mutation UpdateStatusContract($input: UpdateContractStatusDto!) {
+  updateStatusContract(input: $input) {
+    createdAt
+    customer {
+      address
+      id
+      name
+      phoneNumber
+    }
+    id
+    name
+    rental {
+      devices {
+        availableQuantity
+        description
+        hourlyRentalFee
+        id
+        img
+        name
+        quantity
+      }
+      humanResources {
+        availableQuantity
+        description
+        hourlySalary
+        id
+        img
+        name
+        quantity
+      }
+      id
+      locations {
+        address
+        description
+        hourlyRentalFee
+        id
+        img
+        name
+      }
+      rentalEndTime
+      rentalStartTime
+      totalPrice
+      user {
+        avatar
+        createdAt
+        dob
+        email
+        firstName
+        gender
+        id
+        lastName
+        phoneNumber
+        role {
+          id
+          name
+        }
+        roleId
+        updatedAt
+      }
+    }
+    singingDate
+    status
+  }
+}
+    `;
+export type UpdateStatusContractMutationFn = Apollo.MutationFunction<UpdateStatusContractMutation, UpdateStatusContractMutationVariables>;
+
+/**
+ * __useUpdateStatusContractMutation__
+ *
+ * To run a mutation, you first call `useUpdateStatusContractMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateStatusContractMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateStatusContractMutation, { data, loading, error }] = useUpdateStatusContractMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateStatusContractMutation(baseOptions?: Apollo.MutationHookOptions<UpdateStatusContractMutation, UpdateStatusContractMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<UpdateStatusContractMutation, UpdateStatusContractMutationVariables>(UpdateStatusContractDocument, options);
+}
+export type UpdateStatusContractMutationHookResult = ReturnType<typeof useUpdateStatusContractMutation>;
+export type UpdateStatusContractMutationResult = Apollo.MutationResult<UpdateStatusContractMutation>;
+export type UpdateStatusContractMutationOptions = Apollo.BaseMutationOptions<UpdateStatusContractMutation, UpdateStatusContractMutationVariables>;
 export const UpdateMeDocument = gql`
     mutation updateMe($input: UserUpdateInput!) {
   updateMe(input: $input) {
@@ -1529,6 +1822,37 @@ export function useUpdateMeMutation(baseOptions?: Apollo.MutationHookOptions<Upd
 export type UpdateMeMutationHookResult = ReturnType<typeof useUpdateMeMutation>;
 export type UpdateMeMutationResult = Apollo.MutationResult<UpdateMeMutation>;
 export type UpdateMeMutationOptions = Apollo.BaseMutationOptions<UpdateMeMutation, UpdateMeMutationVariables>;
+export const UploadImageDocument = gql`
+    mutation UploadImage($input: UploadRequest!) {
+  uploadImage(input: $input)
+}
+    `;
+export type UploadImageMutationFn = Apollo.MutationFunction<UploadImageMutation, UploadImageMutationVariables>;
+
+/**
+ * __useUploadImageMutation__
+ *
+ * To run a mutation, you first call `useUploadImageMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUploadImageMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [uploadImageMutation, { data, loading, error }] = useUploadImageMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUploadImageMutation(baseOptions?: Apollo.MutationHookOptions<UploadImageMutation, UploadImageMutationVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useMutation<UploadImageMutation, UploadImageMutationVariables>(UploadImageDocument, options);
+}
+export type UploadImageMutationHookResult = ReturnType<typeof useUploadImageMutation>;
+export type UploadImageMutationResult = Apollo.MutationResult<UploadImageMutation>;
+export type UploadImageMutationOptions = Apollo.BaseMutationOptions<UploadImageMutation, UploadImageMutationVariables>;
 export const VerifyCodeDocument = gql`
     mutation verifyCode($input: CodeVerifyDto!) {
   verifyCode(input: $input) {
@@ -1564,6 +1888,849 @@ export function useVerifyCodeMutation(baseOptions?: Apollo.MutationHookOptions<V
 export type VerifyCodeMutationHookResult = ReturnType<typeof useVerifyCodeMutation>;
 export type VerifyCodeMutationResult = Apollo.MutationResult<VerifyCodeMutation>;
 export type VerifyCodeMutationOptions = Apollo.BaseMutationOptions<VerifyCodeMutation, VerifyCodeMutationVariables>;
+export const CheckoutRemainBillingContractDocument = gql`
+    query CheckoutRemainBillingContract($input: DepositContractDto!) {
+  checkoutRemainBillingContract(input: $input) {
+    cancelUrl
+    checkoutUrl
+    successUrl
+  }
+}
+    `;
+
+/**
+ * __useCheckoutRemainBillingContractQuery__
+ *
+ * To run a query within a React component, call `useCheckoutRemainBillingContractQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCheckoutRemainBillingContractQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCheckoutRemainBillingContractQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useCheckoutRemainBillingContractQuery(baseOptions: Apollo.QueryHookOptions<CheckoutRemainBillingContractQuery, CheckoutRemainBillingContractQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<CheckoutRemainBillingContractQuery, CheckoutRemainBillingContractQueryVariables>(CheckoutRemainBillingContractDocument, options);
+}
+export function useCheckoutRemainBillingContractLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CheckoutRemainBillingContractQuery, CheckoutRemainBillingContractQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<CheckoutRemainBillingContractQuery, CheckoutRemainBillingContractQueryVariables>(CheckoutRemainBillingContractDocument, options);
+}
+export type CheckoutRemainBillingContractQueryHookResult = ReturnType<typeof useCheckoutRemainBillingContractQuery>;
+export type CheckoutRemainBillingContractLazyQueryHookResult = ReturnType<typeof useCheckoutRemainBillingContractLazyQuery>;
+export type CheckoutRemainBillingContractQueryResult = Apollo.QueryResult<CheckoutRemainBillingContractQuery, CheckoutRemainBillingContractQueryVariables>;
+export function refetchCheckoutRemainBillingContractQuery(variables: CheckoutRemainBillingContractQueryVariables) {
+  return { query: CheckoutRemainBillingContractDocument, variables: variables }
+}
+export const DepositContractDocument = gql`
+    query DepositContract($input: DepositContractDto!) {
+  depositContract(input: $input) {
+    cancelUrl
+    checkoutUrl
+    successUrl
+  }
+}
+    `;
+
+/**
+ * __useDepositContractQuery__
+ *
+ * To run a query within a React component, call `useDepositContractQuery` and pass it any options that fit your needs.
+ * When your component renders, `useDepositContractQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useDepositContractQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useDepositContractQuery(baseOptions: Apollo.QueryHookOptions<DepositContractQuery, DepositContractQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<DepositContractQuery, DepositContractQueryVariables>(DepositContractDocument, options);
+}
+export function useDepositContractLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<DepositContractQuery, DepositContractQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<DepositContractQuery, DepositContractQueryVariables>(DepositContractDocument, options);
+}
+export type DepositContractQueryHookResult = ReturnType<typeof useDepositContractQuery>;
+export type DepositContractLazyQueryHookResult = ReturnType<typeof useDepositContractLazyQuery>;
+export type DepositContractQueryResult = Apollo.QueryResult<DepositContractQuery, DepositContractQueryVariables>;
+export function refetchDepositContractQuery(variables: DepositContractQueryVariables) {
+  return { query: DepositContractDocument, variables: variables }
+}
+export const GetContractDocument = gql`
+    query GetContract($getContractId: String!) {
+  getContract(id: $getContractId) {
+    createdAt
+    customer {
+      address
+      id
+      name
+      phoneNumber
+    }
+    id
+    name
+    rental {
+      customLocation
+      devices {
+        availableQuantity
+        createdAt
+        description
+        hourlyRentalFee
+        id
+        img
+        name
+        quantity
+      }
+      event {
+        createdAt
+        description
+        detail
+        eventFormat
+        eventType {
+          id
+          name
+        }
+        id
+        img
+        isTemplate
+        name
+      }
+      humanResources {
+        availableQuantity
+        createdAt
+        description
+        hourlySalary
+        id
+        img
+        name
+        quantity
+      }
+      id
+      locations {
+        address
+        createdAt
+        description
+        hourlyRentalFee
+        id
+        img
+        name
+      }
+      rentalEndTime
+      rentalStartTime
+      timelines {
+        description
+        id
+        startTime
+      }
+      totalPrice
+      user {
+        avatar
+        createdAt
+        dob
+        email
+        firstName
+        gender
+        id
+        lastName
+        phoneNumber
+        role {
+          id
+          name
+        }
+        roleId
+        updatedAt
+      }
+    }
+    singingDate
+    status
+    updatedAt
+  }
+}
+    `;
+
+/**
+ * __useGetContractQuery__
+ *
+ * To run a query within a React component, call `useGetContractQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetContractQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetContractQuery({
+ *   variables: {
+ *      getContractId: // value for 'getContractId'
+ *   },
+ * });
+ */
+export function useGetContractQuery(baseOptions: Apollo.QueryHookOptions<GetContractQuery, GetContractQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetContractQuery, GetContractQueryVariables>(GetContractDocument, options);
+}
+export function useGetContractLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetContractQuery, GetContractQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetContractQuery, GetContractQueryVariables>(GetContractDocument, options);
+}
+export type GetContractQueryHookResult = ReturnType<typeof useGetContractQuery>;
+export type GetContractLazyQueryHookResult = ReturnType<typeof useGetContractLazyQuery>;
+export type GetContractQueryResult = Apollo.QueryResult<GetContractQuery, GetContractQueryVariables>;
+export function refetchGetContractQuery(variables: GetContractQueryVariables) {
+  return { query: GetContractDocument, variables: variables }
+}
+export const GetDevicesAvailableDocument = gql`
+    query GetDevicesAvailable($input: GetServicesRequest!) {
+  getDevicesAvailable(input: $input) {
+    items {
+      availableQuantity
+      hourlyRentalFee
+      id
+      img
+      name
+      quantity
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetDevicesAvailableQuery__
+ *
+ * To run a query within a React component, call `useGetDevicesAvailableQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetDevicesAvailableQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetDevicesAvailableQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useGetDevicesAvailableQuery(baseOptions: Apollo.QueryHookOptions<GetDevicesAvailableQuery, GetDevicesAvailableQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetDevicesAvailableQuery, GetDevicesAvailableQueryVariables>(GetDevicesAvailableDocument, options);
+}
+export function useGetDevicesAvailableLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetDevicesAvailableQuery, GetDevicesAvailableQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetDevicesAvailableQuery, GetDevicesAvailableQueryVariables>(GetDevicesAvailableDocument, options);
+}
+export type GetDevicesAvailableQueryHookResult = ReturnType<typeof useGetDevicesAvailableQuery>;
+export type GetDevicesAvailableLazyQueryHookResult = ReturnType<typeof useGetDevicesAvailableLazyQuery>;
+export type GetDevicesAvailableQueryResult = Apollo.QueryResult<GetDevicesAvailableQuery, GetDevicesAvailableQueryVariables>;
+export function refetchGetDevicesAvailableQuery(variables: GetDevicesAvailableQueryVariables) {
+  return { query: GetDevicesAvailableDocument, variables: variables }
+}
+export const GetDevicesRentalDocument = gql`
+    query GetDevicesRental($rentalId: String!) {
+  getDevicesRental(rentalId: $rentalId) {
+    device {
+      availableQuantity
+      hourlyRentalFee
+      id
+      img
+      name
+      quantity
+    }
+    id
+    quantity
+  }
+}
+    `;
+
+/**
+ * __useGetDevicesRentalQuery__
+ *
+ * To run a query within a React component, call `useGetDevicesRentalQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetDevicesRentalQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetDevicesRentalQuery({
+ *   variables: {
+ *      rentalId: // value for 'rentalId'
+ *   },
+ * });
+ */
+export function useGetDevicesRentalQuery(baseOptions: Apollo.QueryHookOptions<GetDevicesRentalQuery, GetDevicesRentalQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetDevicesRentalQuery, GetDevicesRentalQueryVariables>(GetDevicesRentalDocument, options);
+}
+export function useGetDevicesRentalLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetDevicesRentalQuery, GetDevicesRentalQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetDevicesRentalQuery, GetDevicesRentalQueryVariables>(GetDevicesRentalDocument, options);
+}
+export type GetDevicesRentalQueryHookResult = ReturnType<typeof useGetDevicesRentalQuery>;
+export type GetDevicesRentalLazyQueryHookResult = ReturnType<typeof useGetDevicesRentalLazyQuery>;
+export type GetDevicesRentalQueryResult = Apollo.QueryResult<GetDevicesRentalQuery, GetDevicesRentalQueryVariables>;
+export function refetchGetDevicesRentalQuery(variables: GetDevicesRentalQueryVariables) {
+  return { query: GetDevicesRentalDocument, variables: variables }
+}
+export const GetEmailSendLogsByContractIdDocument = gql`
+    query GetEmailSendLogsByContractId($input: GetEmailSendLogRequest!) {
+  getEmailSendLogsByContractId(input: $input) {
+    items {
+      contractId
+      createdAt
+      fileName
+      guests {
+        createdAt
+        email
+        emailSendLogId
+        id
+        status
+      }
+      id
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetEmailSendLogsByContractIdQuery__
+ *
+ * To run a query within a React component, call `useGetEmailSendLogsByContractIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetEmailSendLogsByContractIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetEmailSendLogsByContractIdQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useGetEmailSendLogsByContractIdQuery(baseOptions: Apollo.QueryHookOptions<GetEmailSendLogsByContractIdQuery, GetEmailSendLogsByContractIdQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetEmailSendLogsByContractIdQuery, GetEmailSendLogsByContractIdQueryVariables>(GetEmailSendLogsByContractIdDocument, options);
+}
+export function useGetEmailSendLogsByContractIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetEmailSendLogsByContractIdQuery, GetEmailSendLogsByContractIdQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetEmailSendLogsByContractIdQuery, GetEmailSendLogsByContractIdQueryVariables>(GetEmailSendLogsByContractIdDocument, options);
+}
+export type GetEmailSendLogsByContractIdQueryHookResult = ReturnType<typeof useGetEmailSendLogsByContractIdQuery>;
+export type GetEmailSendLogsByContractIdLazyQueryHookResult = ReturnType<typeof useGetEmailSendLogsByContractIdLazyQuery>;
+export type GetEmailSendLogsByContractIdQueryResult = Apollo.QueryResult<GetEmailSendLogsByContractIdQuery, GetEmailSendLogsByContractIdQueryVariables>;
+export function refetchGetEmailSendLogsByContractIdQuery(variables: GetEmailSendLogsByContractIdQueryVariables) {
+  return { query: GetEmailSendLogsByContractIdDocument, variables: variables }
+}
+export const GetEventByIdDocument = gql`
+    query GetEventById($getEventByIdId: String!) {
+  getEventById(id: $getEventByIdId) {
+    createdAt
+    description
+    detail
+    eventFormat
+    eventType {
+      id
+      name
+    }
+    id
+    img
+    isTemplate
+    name
+    rental {
+      customLocation
+      devices {
+        availableQuantity
+        createdAt
+        description
+        hourlyRentalFee
+        id
+        img
+        name
+        quantity
+      }
+      event {
+        createdAt
+        description
+        detail
+        eventFormat
+        id
+        img
+        isTemplate
+        name
+      }
+      humanResources {
+        availableQuantity
+        createdAt
+        description
+        hourlySalary
+        id
+        img
+        name
+        quantity
+      }
+      id
+      locations {
+        address
+        createdAt
+        description
+        hourlyRentalFee
+        id
+        img
+        name
+      }
+      rentalEndTime
+      rentalStartTime
+      timelines {
+        description
+        id
+        startTime
+      }
+      totalPrice
+      user {
+        avatar
+        createdAt
+        dob
+        email
+        firstName
+        gender
+        id
+        lastName
+        phoneNumber
+        role {
+          id
+          name
+        }
+        roleId
+        status
+        updatedAt
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetEventByIdQuery__
+ *
+ * To run a query within a React component, call `useGetEventByIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetEventByIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetEventByIdQuery({
+ *   variables: {
+ *      getEventByIdId: // value for 'getEventByIdId'
+ *   },
+ * });
+ */
+export function useGetEventByIdQuery(baseOptions: Apollo.QueryHookOptions<GetEventByIdQuery, GetEventByIdQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetEventByIdQuery, GetEventByIdQueryVariables>(GetEventByIdDocument, options);
+}
+export function useGetEventByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetEventByIdQuery, GetEventByIdQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetEventByIdQuery, GetEventByIdQueryVariables>(GetEventByIdDocument, options);
+}
+export type GetEventByIdQueryHookResult = ReturnType<typeof useGetEventByIdQuery>;
+export type GetEventByIdLazyQueryHookResult = ReturnType<typeof useGetEventByIdLazyQuery>;
+export type GetEventByIdQueryResult = Apollo.QueryResult<GetEventByIdQuery, GetEventByIdQueryVariables>;
+export function refetchGetEventByIdQuery(variables: GetEventByIdQueryVariables) {
+  return { query: GetEventByIdDocument, variables: variables }
+}
+export const GetEventTypesDocument = gql`
+    query GetEventTypes($input: QueryFilterDto!) {
+  getEventTypes(input: $input) {
+    items {
+      id
+      name
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetEventTypesQuery__
+ *
+ * To run a query within a React component, call `useGetEventTypesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetEventTypesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetEventTypesQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useGetEventTypesQuery(baseOptions: Apollo.QueryHookOptions<GetEventTypesQuery, GetEventTypesQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetEventTypesQuery, GetEventTypesQueryVariables>(GetEventTypesDocument, options);
+}
+export function useGetEventTypesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetEventTypesQuery, GetEventTypesQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetEventTypesQuery, GetEventTypesQueryVariables>(GetEventTypesDocument, options);
+}
+export type GetEventTypesQueryHookResult = ReturnType<typeof useGetEventTypesQuery>;
+export type GetEventTypesLazyQueryHookResult = ReturnType<typeof useGetEventTypesLazyQuery>;
+export type GetEventTypesQueryResult = Apollo.QueryResult<GetEventTypesQuery, GetEventTypesQueryVariables>;
+export function refetchGetEventTypesQuery(variables: GetEventTypesQueryVariables) {
+  return { query: GetEventTypesDocument, variables: variables }
+}
+export const GetEventsDocument = gql`
+    query GetEvents($input: GetEventsRequest!) {
+  getEvents(input: $input) {
+    items {
+      createdAt
+      description
+      detail
+      eventFormat
+      eventType {
+        id
+        name
+      }
+      id
+      img
+      isTemplate
+      name
+      rental {
+        customLocation
+        devices {
+          availableQuantity
+          createdAt
+          description
+          hourlyRentalFee
+          id
+          img
+          name
+          quantity
+        }
+        event {
+          createdAt
+          description
+          detail
+          eventFormat
+          id
+          img
+          isTemplate
+          name
+        }
+        humanResources {
+          availableQuantity
+          createdAt
+          description
+          hourlySalary
+          id
+          img
+          name
+          quantity
+        }
+        id
+        locations {
+          address
+          createdAt
+          description
+          hourlyRentalFee
+          id
+          img
+          name
+        }
+        rentalEndTime
+        rentalStartTime
+        timelines {
+          description
+          id
+          startTime
+        }
+        totalPrice
+        user {
+          avatar
+          createdAt
+          dob
+          email
+          firstName
+          gender
+          id
+          lastName
+          phoneNumber
+          role {
+            id
+            name
+          }
+          roleId
+          status
+          updatedAt
+        }
+      }
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetEventsQuery__
+ *
+ * To run a query within a React component, call `useGetEventsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetEventsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetEventsQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useGetEventsQuery(baseOptions: Apollo.QueryHookOptions<GetEventsQuery, GetEventsQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetEventsQuery, GetEventsQueryVariables>(GetEventsDocument, options);
+}
+export function useGetEventsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetEventsQuery, GetEventsQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetEventsQuery, GetEventsQueryVariables>(GetEventsDocument, options);
+}
+export type GetEventsQueryHookResult = ReturnType<typeof useGetEventsQuery>;
+export type GetEventsLazyQueryHookResult = ReturnType<typeof useGetEventsLazyQuery>;
+export type GetEventsQueryResult = Apollo.QueryResult<GetEventsQuery, GetEventsQueryVariables>;
+export function refetchGetEventsQuery(variables: GetEventsQueryVariables) {
+  return { query: GetEventsDocument, variables: variables }
+}
+export const GetHumanResourcesAvailableDocument = gql`
+    query GetHumanResourcesAvailable($input: GetServicesRequest!) {
+  getHumanResourcesAvailable(input: $input) {
+    items {
+      availableQuantity
+      hourlySalary
+      id
+      name
+      quantity
+      img
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetHumanResourcesAvailableQuery__
+ *
+ * To run a query within a React component, call `useGetHumanResourcesAvailableQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetHumanResourcesAvailableQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetHumanResourcesAvailableQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useGetHumanResourcesAvailableQuery(baseOptions: Apollo.QueryHookOptions<GetHumanResourcesAvailableQuery, GetHumanResourcesAvailableQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetHumanResourcesAvailableQuery, GetHumanResourcesAvailableQueryVariables>(GetHumanResourcesAvailableDocument, options);
+}
+export function useGetHumanResourcesAvailableLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetHumanResourcesAvailableQuery, GetHumanResourcesAvailableQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetHumanResourcesAvailableQuery, GetHumanResourcesAvailableQueryVariables>(GetHumanResourcesAvailableDocument, options);
+}
+export type GetHumanResourcesAvailableQueryHookResult = ReturnType<typeof useGetHumanResourcesAvailableQuery>;
+export type GetHumanResourcesAvailableLazyQueryHookResult = ReturnType<typeof useGetHumanResourcesAvailableLazyQuery>;
+export type GetHumanResourcesAvailableQueryResult = Apollo.QueryResult<GetHumanResourcesAvailableQuery, GetHumanResourcesAvailableQueryVariables>;
+export function refetchGetHumanResourcesAvailableQuery(variables: GetHumanResourcesAvailableQueryVariables) {
+  return { query: GetHumanResourcesAvailableDocument, variables: variables }
+}
+export const GetHumanResourcesRentalDocument = gql`
+    query GetHumanResourcesRental($rentalId: String!) {
+  getHumanResourcesRental(rentalId: $rentalId) {
+    humanResource {
+      availableQuantity
+      hourlySalary
+      id
+      name
+      quantity
+    }
+    id
+    quantity
+  }
+}
+    `;
+
+/**
+ * __useGetHumanResourcesRentalQuery__
+ *
+ * To run a query within a React component, call `useGetHumanResourcesRentalQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetHumanResourcesRentalQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetHumanResourcesRentalQuery({
+ *   variables: {
+ *      rentalId: // value for 'rentalId'
+ *   },
+ * });
+ */
+export function useGetHumanResourcesRentalQuery(baseOptions: Apollo.QueryHookOptions<GetHumanResourcesRentalQuery, GetHumanResourcesRentalQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetHumanResourcesRentalQuery, GetHumanResourcesRentalQueryVariables>(GetHumanResourcesRentalDocument, options);
+}
+export function useGetHumanResourcesRentalLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetHumanResourcesRentalQuery, GetHumanResourcesRentalQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetHumanResourcesRentalQuery, GetHumanResourcesRentalQueryVariables>(GetHumanResourcesRentalDocument, options);
+}
+export type GetHumanResourcesRentalQueryHookResult = ReturnType<typeof useGetHumanResourcesRentalQuery>;
+export type GetHumanResourcesRentalLazyQueryHookResult = ReturnType<typeof useGetHumanResourcesRentalLazyQuery>;
+export type GetHumanResourcesRentalQueryResult = Apollo.QueryResult<GetHumanResourcesRentalQuery, GetHumanResourcesRentalQueryVariables>;
+export function refetchGetHumanResourcesRentalQuery(variables: GetHumanResourcesRentalQueryVariables) {
+  return { query: GetHumanResourcesRentalDocument, variables: variables }
+}
+export const GetLocationsAvailableDocument = gql`
+    query GetLocationsAvailable($input: GetServicesRequest!) {
+  getLocationsAvailable(input: $input) {
+    items {
+      address
+      id
+      img
+      name
+      hourlyRentalFee
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetLocationsAvailableQuery__
+ *
+ * To run a query within a React component, call `useGetLocationsAvailableQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetLocationsAvailableQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetLocationsAvailableQuery({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useGetLocationsAvailableQuery(baseOptions: Apollo.QueryHookOptions<GetLocationsAvailableQuery, GetLocationsAvailableQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetLocationsAvailableQuery, GetLocationsAvailableQueryVariables>(GetLocationsAvailableDocument, options);
+}
+export function useGetLocationsAvailableLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetLocationsAvailableQuery, GetLocationsAvailableQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetLocationsAvailableQuery, GetLocationsAvailableQueryVariables>(GetLocationsAvailableDocument, options);
+}
+export type GetLocationsAvailableQueryHookResult = ReturnType<typeof useGetLocationsAvailableQuery>;
+export type GetLocationsAvailableLazyQueryHookResult = ReturnType<typeof useGetLocationsAvailableLazyQuery>;
+export type GetLocationsAvailableQueryResult = Apollo.QueryResult<GetLocationsAvailableQuery, GetLocationsAvailableQueryVariables>;
+export function refetchGetLocationsAvailableQuery(variables: GetLocationsAvailableQueryVariables) {
+  return { query: GetLocationsAvailableDocument, variables: variables }
+}
+export const GetLocationsRentalDocument = gql`
+    query GetLocationsRental($rentalId: String!) {
+  getLocationsRental(rentalId: $rentalId) {
+    id
+    location {
+      address
+      id
+      img
+      name
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetLocationsRentalQuery__
+ *
+ * To run a query within a React component, call `useGetLocationsRentalQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetLocationsRentalQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetLocationsRentalQuery({
+ *   variables: {
+ *      rentalId: // value for 'rentalId'
+ *   },
+ * });
+ */
+export function useGetLocationsRentalQuery(baseOptions: Apollo.QueryHookOptions<GetLocationsRentalQuery, GetLocationsRentalQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetLocationsRentalQuery, GetLocationsRentalQueryVariables>(GetLocationsRentalDocument, options);
+}
+export function useGetLocationsRentalLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetLocationsRentalQuery, GetLocationsRentalQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetLocationsRentalQuery, GetLocationsRentalQueryVariables>(GetLocationsRentalDocument, options);
+}
+export type GetLocationsRentalQueryHookResult = ReturnType<typeof useGetLocationsRentalQuery>;
+export type GetLocationsRentalLazyQueryHookResult = ReturnType<typeof useGetLocationsRentalLazyQuery>;
+export type GetLocationsRentalQueryResult = Apollo.QueryResult<GetLocationsRentalQuery, GetLocationsRentalQueryVariables>;
+export function refetchGetLocationsRentalQuery(variables: GetLocationsRentalQueryVariables) {
+  return { query: GetLocationsRentalDocument, variables: variables }
+}
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
@@ -1611,8 +2778,201 @@ export type GetMeQueryHookResult = ReturnType<typeof useGetMeQuery>;
 export type GetMeLazyQueryHookResult = ReturnType<typeof useGetMeLazyQuery>;
 export type GetMeQueryResult = Apollo.QueryResult<GetMeQuery, GetMeQueryVariables>;
 export function refetchGetMeQuery(variables?: GetMeQueryVariables) {
-      return { query: GetMeDocument, variables: variables }
+  return { query: GetMeDocument, variables: variables }
+}
+export const GetMyContractsDocument = gql`
+    query GetMyContracts($queryParams: GetContractsRequest!) {
+  getMyContracts(queryParams: $queryParams) {
+    items {
+      createdAt
+      customer {
+        address
+        id
+        name
+        phoneNumber
+      }
+      id
+      name
+      rental {
+        devices {
+          availableQuantity
+          description
+          hourlyRentalFee
+          id
+          img
+          name
+          quantity
+        }
+        humanResources {
+          availableQuantity
+          description
+          hourlySalary
+          id
+          img
+          name
+          quantity
+        }
+        id
+        locations {
+          address
+          description
+          hourlyRentalFee
+          id
+          img
+          name
+        }
+        rentalEndTime
+        rentalStartTime
+        totalPrice
+        user {
+          avatar
+          createdAt
+          dob
+          email
+          firstName
+          gender
+          id
+          lastName
+          phoneNumber
+          role {
+            id
+            name
+          }
+          roleId
+          updatedAt
+        }
+      }
+      singingDate
+      status
     }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetMyContractsQuery__
+ *
+ * To run a query within a React component, call `useGetMyContractsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetMyContractsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetMyContractsQuery({
+ *   variables: {
+ *      queryParams: // value for 'queryParams'
+ *   },
+ * });
+ */
+export function useGetMyContractsQuery(baseOptions: Apollo.QueryHookOptions<GetMyContractsQuery, GetMyContractsQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetMyContractsQuery, GetMyContractsQueryVariables>(GetMyContractsDocument, options);
+}
+export function useGetMyContractsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetMyContractsQuery, GetMyContractsQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetMyContractsQuery, GetMyContractsQueryVariables>(GetMyContractsDocument, options);
+}
+export type GetMyContractsQueryHookResult = ReturnType<typeof useGetMyContractsQuery>;
+export type GetMyContractsLazyQueryHookResult = ReturnType<typeof useGetMyContractsLazyQuery>;
+export type GetMyContractsQueryResult = Apollo.QueryResult<GetMyContractsQuery, GetMyContractsQueryVariables>;
+export function refetchGetMyContractsQuery(variables: GetMyContractsQueryVariables) {
+  return { query: GetMyContractsDocument, variables: variables }
+}
+export const GetRoleDocument = gql`
+    query GetRole($getRoleId: ID!) {
+  getRole(id: $getRoleId) {
+    id
+    name
+  }
+}
+    `;
+
+/**
+ * __useGetRoleQuery__
+ *
+ * To run a query within a React component, call `useGetRoleQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetRoleQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetRoleQuery({
+ *   variables: {
+ *      getRoleId: // value for 'getRoleId'
+ *   },
+ * });
+ */
+export function useGetRoleQuery(baseOptions: Apollo.QueryHookOptions<GetRoleQuery, GetRoleQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetRoleQuery, GetRoleQueryVariables>(GetRoleDocument, options);
+}
+export function useGetRoleLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetRoleQuery, GetRoleQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetRoleQuery, GetRoleQueryVariables>(GetRoleDocument, options);
+}
+export type GetRoleQueryHookResult = ReturnType<typeof useGetRoleQuery>;
+export type GetRoleLazyQueryHookResult = ReturnType<typeof useGetRoleLazyQuery>;
+export type GetRoleQueryResult = Apollo.QueryResult<GetRoleQuery, GetRoleQueryVariables>;
+export function refetchGetRoleQuery(variables: GetRoleQueryVariables) {
+  return { query: GetRoleDocument, variables: variables }
+}
+export const GetRolesDocument = gql`
+    query GetRoles($queryParams: QueryFilterDto!) {
+  getRoles(queryParams: $queryParams) {
+    items {
+      id
+      name
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetRolesQuery__
+ *
+ * To run a query within a React component, call `useGetRolesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetRolesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetRolesQuery({
+ *   variables: {
+ *      queryParams: // value for 'queryParams'
+ *   },
+ * });
+ */
+export function useGetRolesQuery(baseOptions: Apollo.QueryHookOptions<GetRolesQuery, GetRolesQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetRolesQuery, GetRolesQueryVariables>(GetRolesDocument, options);
+}
+export function useGetRolesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetRolesQuery, GetRolesQueryVariables>) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetRolesQuery, GetRolesQueryVariables>(GetRolesDocument, options);
+}
+export type GetRolesQueryHookResult = ReturnType<typeof useGetRolesQuery>;
+export type GetRolesLazyQueryHookResult = ReturnType<typeof useGetRolesLazyQuery>;
+export type GetRolesQueryResult = Apollo.QueryResult<GetRolesQuery, GetRolesQueryVariables>;
+export function refetchGetRolesQuery(variables: GetRolesQueryVariables) {
+  return { query: GetRolesDocument, variables: variables }
+}
 export type MetaFragmentFragment = { totalItems: number, itemCount: number, itemsPerPage: number, totalPages: number, currentPage: number };
 
 export type ChangePasswordMutationVariables = Exact<{

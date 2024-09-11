@@ -43,10 +43,10 @@ const userMenus: MenuType[] = [
   },
   {
     key: 'change-password',
-    to: '/ChangePassword',
+    to: '/change-password',
     icon: <IconUser width={20} height={20} />,
     title: 'Đổi mật khẩu',
-    href: ['../ChangePassword'],
+    href: ['/user/change-password'],
   },
   {
     key: 'logout',
