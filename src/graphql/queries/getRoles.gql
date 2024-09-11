@@ -1,0 +1,15 @@
+query GetRoles($queryParams: QueryFilterDto!) {
+  getRoles(queryParams: $queryParams) {
+    items {
+      id
+      name
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
