@@ -1,7 +1,0 @@
-query DepositContract($input: DepositContractDto!) {
-  depositContract(input: $input) {
-    cancelUrl
-    checkoutUrl
-    successUrl
-  }
-}

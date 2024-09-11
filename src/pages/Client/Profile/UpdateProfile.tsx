@@ -189,7 +189,6 @@ function UpdateProfile() {
                   <PrimaryButton htmlType="submit" loading={updateLoading}>
                     Lưu
                   </PrimaryButton>
-                  
                   <OutlineButton
                     disabled={updateLoading}
                     onClick={() => {

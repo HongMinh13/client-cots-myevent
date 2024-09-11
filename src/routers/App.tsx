@@ -13,8 +13,6 @@ import { ROLE } from '#/shared/utils/type';
 import { useRoutes } from 'react-router';
 import GuardRoute from './GuardRoute';
 import { AboutPage } from '#/pages/Client/about';
-import { MyContract } from '#/pages/Client/Contract';
-import MyContractDetail from '#/pages/Client/Contract/ContractDetail';
 // import { Cart } from '#/pages/Client/Cart';
 // import { MyContract } from '#/pages/Client/Contract';
 // import MyContractDetail from '#/pages/Client/Contract/ContractDetail';
@@ -101,26 +99,26 @@ const App = () => {
     //     />
     //   ),
     // },
-    {
-      path: '/contract-management',
-      element: (
-        <GuardRoute
-          roles={[ROLE.USER]}
-          isPrivate={true}
-          children={<ClientLayout children={<MyContract />} />}
-        />
-      ),
-    },
-    {
-      path: '/contract-management/:id',
-      element: (
-        <GuardRoute
-          roles={[ROLE.USER]}
-          isPrivate={true}
-          children={<ClientLayout children={<MyContractDetail />} />}
-        />
-      ),
-    },
+    // {
+    //   path: '/contract-management',
+    //   element: (
+    //     <GuardRoute
+    //       roles={[ROLE.USER]}
+    //       isPrivate={true}
+    //       children={<ClientLayout children={<MyContract />} />}
+    //     />
+    //   ),
+    // },
+    // {
+    //   path: '/contract-management/:id',
+    //   element: (
+    //     <GuardRoute
+    //       roles={[ROLE.USER]}
+    //       isPrivate={true}
+    //       children={<ClientLayout children={<MyContractDetail />} />}
+    //     />
+    //   ),
+    // },
     // {
     //   path: '/admin/*',
     //   element: (
