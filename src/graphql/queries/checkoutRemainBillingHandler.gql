@@ -1,0 +1,7 @@
+query CheckoutRemainBillingContract($input: DepositContractDto!) {
+  checkoutRemainBillingContract(input: $input) {
+    cancelUrl
+    checkoutUrl
+    successUrl
+  }
+}

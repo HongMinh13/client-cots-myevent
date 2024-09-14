@@ -1,0 +1,6 @@
+query GetRole($getRoleId: ID!) {
+  getRole(id: $getRoleId) {
+    id
+    name
+  }
+}

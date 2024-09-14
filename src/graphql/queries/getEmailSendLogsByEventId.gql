@@ -1,0 +1,24 @@
+query GetEmailSendLogsByContractId($input: GetEmailSendLogRequest!) {
+  getEmailSendLogsByContractId(input: $input) {
+    items {
+      contractId
+      createdAt
+      fileName
+      guests {
+        createdAt
+        email
+        emailSendLogId
+        id
+        status
+      }
+      id
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

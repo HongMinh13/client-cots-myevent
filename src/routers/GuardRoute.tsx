@@ -17,7 +17,7 @@ function GuardRoute({ isPrivate = false, children, roles }: Props) {
 
   const [getMeQuery, { data: getMeData }] = useGetMeLazyQuery({
     onCompleted(res) {
-      if (roles && !roles.includes(res.getMe.role.name as ROLE)) {
+      if (roles && !roles.includes(res.getMe.role?.name as ROLE)) {
         navigate('/', {
           replace: true,
         });

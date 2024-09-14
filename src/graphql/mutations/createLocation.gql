@@ -1,0 +1,6 @@
+mutation CreateLocation($input: CreateLocationRequest!) {
+  createLocation(input: $input) {
+    message
+    success
+  }
+}

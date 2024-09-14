@@ -1,0 +1,15 @@
+query GetEventTypes($input: QueryFilterDto!) {
+  getEventTypes(input: $input) {
+    items {
+      id
+      name
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

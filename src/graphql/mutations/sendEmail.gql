@@ -1,0 +1,3 @@
+mutation SendEmail($input: SendEmailRequest!) {
+  sendEmail(input: $input)
+}

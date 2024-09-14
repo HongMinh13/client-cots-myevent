@@ -14,8 +14,10 @@ import { useRoutes } from 'react-router';
 import GuardRoute from './GuardRoute';
 import { AboutPage } from '#/pages/Client/about';
 // import { Cart } from '#/pages/Client/Cart';
-// import { MyContract } from '#/pages/Client/Contract';
-// import MyContractDetail from '#/pages/Client/Contract/ContractDetail';
+ import { MyContract } from '#/pages/Client/Contract';
+ import MyContractDetail from '#/pages/Client/Contract/ContractDetail';
+import ChangePassword from '#/pages/Client/Profile/ChangePassword';
+import { MyGuestInvitation } from '#/pages/Client/GuestInvitation';
 
 const App = () => {
   const routes = useRoutes([
@@ -46,6 +48,16 @@ const App = () => {
           roles={[ROLE.ADMIN, ROLE.USER]}
           isPrivate={true}
           children={<ClientLayout children={<UpdateProfile />} />}
+        />
+      ),
+    },
+    {
+      path: '/change-password',
+      element: (
+        <GuardRoute
+          roles={[ROLE.ADMIN, ROLE.USER]}
+          isPrivate={true}
+          children={<ClientLayout children={<ChangePassword />} />}
         />
       ),
     },
@@ -99,26 +111,36 @@ const App = () => {
     //     />
     //   ),
     // },
-    // {
-    //   path: '/contract-management',
-    //   element: (
-    //     <GuardRoute
-    //       roles={[ROLE.USER]}
-    //       isPrivate={true}
-    //       children={<ClientLayout children={<MyContract />} />}
-    //     />
-    //   ),
-    // },
-    // {
-    //   path: '/contract-management/:id',
-    //   element: (
-    //     <GuardRoute
-    //       roles={[ROLE.USER]}
-    //       isPrivate={true}
-    //       children={<ClientLayout children={<MyContractDetail />} />}
-    //     />
-    //   ),
-    // },
+    {
+      path: '/contract-management',
+      element: (
+        <GuardRoute
+          roles={[ROLE.USER]}
+          isPrivate={true}
+          children={<ClientLayout children={<MyContract />} />}
+        />
+      ),
+    },
+    {
+      path: '/contract-management/:id',
+      element: (
+        <GuardRoute
+          roles={[ROLE.USER]}
+          isPrivate={true}
+          children={<ClientLayout children={<MyContractDetail />} />}
+        />
+      ),
+    },
+    {
+      path: '/guest-invitation',
+      element: (
+        <GuardRoute
+          roles={[ROLE.USER]}
+          isPrivate={true}
+          children={<ClientLayout children={<MyGuestInvitation />} />}
+        />
+      ),
+    },
     // {
     //   path: '/admin/*',
     //   element: (

@@ -1,0 +1,14 @@
+query GetDevicesRental($rentalId: String!) {
+  getDevicesRental(rentalId: $rentalId) {
+    device {
+      availableQuantity
+      hourlyRentalFee
+      id
+      img
+      name
+      quantity
+    }
+    id
+    quantity
+  }
+}

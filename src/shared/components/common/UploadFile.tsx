@@ -22,13 +22,13 @@ import { DEFAULT_UPLOAD_TYPE } from '#/shared/utils/constant';
 
 interface Props {
   src?: string | null;
-  onChange?: (url?: string) => void;
+  onChange1?: (url?: string, pathFile?: string) => void;
   isEdit?: boolean;
 }
 
 function UploadFile({
   src,
-  onChange,
+  onChange1,
   accept,
   isEdit,
   ...restProps
@@ -59,7 +59,7 @@ function UploadFile({
       const { data } = await getPresignedUrl({
         fileName: (file as File).name,
         fileType: (file as File).type,
-        pathType: S3UploadType.Profile,
+        pathType: S3UploadType.Public,
       });
       const uploadUrl = data?.presignedUrlS3?.uploadUrl;
       const url = `${import.meta.env.VITE_IMAGE_URL}/${
@@ -72,7 +72,7 @@ function UploadFile({
           signedRequest: uploadUrl,
         });
         onSuccess?.(response.statusText, file as unknown as XMLHttpRequest);
-        onChange?.(url);
+        onChange1?.(url, data?.presignedUrlS3?.pathFile);
         setFile(url);
         setLoading(false);
       }
@@ -83,7 +83,7 @@ function UploadFile({
   };
 
   const onRemove = () => {
-    onChange?.(undefined);
+    onChange1?.(undefined);
     setFile(undefined);
   };
 

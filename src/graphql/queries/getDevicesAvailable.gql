@@ -1,0 +1,19 @@
+query GetDevicesAvailable($input: GetServicesRequest!) {
+  getDevicesAvailable(input: $input) {
+    items {
+      availableQuantity
+      hourlyRentalFee
+      id
+      img
+      name
+      quantity
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}
