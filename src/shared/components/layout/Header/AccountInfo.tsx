@@ -40,6 +40,20 @@ const userMenus: MenuType[] = [
     href: ['/user/contract-management'],
   },
   {
+    key: 'guest-invitation',
+    to: '/guest-invitation',
+    icon: <UserAccountSVG width={20} height={20} />,
+    title: 'Quản lý thư mời',
+    href: ['/user/guest-invitation'],
+  },
+  {
+    key: 'change-password',
+    to: '/change-password',
+    icon: <UserAccountSVG width={20} height={20} />,
+    title: 'Đổi mật khẩu',
+    href: ['/user/change-password'],
+  },
+  {
     key: 'logout',
     icon: <LogoutSVG width={20} height={20} />,
     title: 'Đăng xuất',
@@ -88,7 +102,7 @@ function AccountInfo() {
   });
 
   useEffect(() => {
-    if (data?.getMe.role.name === ROLE.ADMIN) {
+    if (data?.getMe.role?.name === ROLE.ADMIN) {
       setMenus(adminMenus);
     }
   }, [data]);

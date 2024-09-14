@@ -1,0 +1,13 @@
+query GetHumanResourcesRental($rentalId: String!) {
+  getHumanResourcesRental(rentalId: $rentalId) {
+    humanResource {
+      availableQuantity
+      hourlySalary
+      id
+      name
+      quantity
+    }
+    id
+    quantity
+  }
+}

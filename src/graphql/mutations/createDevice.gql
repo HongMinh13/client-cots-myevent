@@ -1,0 +1,6 @@
+mutation CreateDevice($input: CreateDeviceRequest!) {
+  createDevice(input: $input) {
+    message
+    success
+  }
+}

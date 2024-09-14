@@ -1,0 +1,6 @@
+mutation RentalServices($input: RentalServicesRequest!) {
+  rentalServices(input: $input) {
+    message
+    success
+  }
+}

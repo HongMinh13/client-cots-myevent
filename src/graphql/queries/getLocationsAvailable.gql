@@ -1,0 +1,18 @@
+query GetLocationsAvailable($input: GetServicesRequest!) {
+  getLocationsAvailable(input: $input) {
+    items {
+      address
+      id
+      img
+      name
+      hourlyRentalFee
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

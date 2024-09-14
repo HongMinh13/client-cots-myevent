@@ -1,0 +1,11 @@
+query GetLocationsRental($rentalId: String!) {
+  getLocationsRental(rentalId: $rentalId) {
+    id
+    location {
+      address
+      id
+      img
+      name
+    }
+  }
+}

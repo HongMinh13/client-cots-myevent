@@ -1,0 +1,6 @@
+    mutation CreateHumanResource($input: CreateHumanResourcesRequest!) {
+  createHumanResource(input: $input) {
+    message
+    success
+  }
+}
