@@ -1,4 +1,4 @@
-
+import { EVENT_DEFAULT } from '#/shared/utils/constant';
 import styled from '@emotion/styled';
 import {
     Alert,
@@ -13,11 +13,16 @@ import {
 } from 'antd';
 import { useParams } from 'react-router-dom';
 import { formatCurrency } from '#/shared/utils/tools';
+import { userVar } from '#/graphql/cache';
 import { ROLE } from '#/shared/utils/type';
 import {
-    useGetEventByIdQuery
+    DeviceData,
+    HumanResourceData,
+    LocationData,
+    useGetEventByIdQuery,
 } from '#/generated/schemas';
 import { useState } from 'react';
+import CreateEvent4 from './CreateEvent4';
 import dayjs from 'dayjs';
 
 const EventDetailPageStyles = styled.div`
@@ -363,7 +368,11 @@ export function EventDetailPage() {
                                             Bạn có nhu cầu tổ chức sự kiện này. Nhấn vào nút bên cạnh
                                             để đăng kí ngay nhé!
                                         </Typography.Text>
-
+                                        <Col>
+                                            {!loading && (
+                                                <CreateEvent4 event={event?.getEventById as any} />
+                                            )}
+                                        </Col>
                                     </Row>
                                 }
                                 type="info"
