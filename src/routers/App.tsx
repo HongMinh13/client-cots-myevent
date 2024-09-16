@@ -6,7 +6,7 @@ import SignIn from '#/pages/Client/SignIn';
 import SignUp from '#/pages/Client/SignUp';
 import { VerifyCode } from '#/pages/Client/VerifyCode';
 import { EventPage } from '#/pages/Client/event';
-import { EventDetailPage } from '#/pages/Client/event/EventDetail';
+// import { EventDetailPage } from '#/pages/Client/event/EventDetail';
 import HomePage from '#/pages/Home';
 import ClientLayout from '#/shared/components/layout/ClientLayout';
 import { ROLE } from '#/shared/utils/type';
@@ -59,10 +59,10 @@ const App = () => {
       path: '/about',
       element: <ClientLayout children={<AboutPage />} />,
     },
-    {
-      path: '/event/:id',
-      element: <ClientLayout children={<EventDetailPage />} />,
-    },
+    // {
+    //   path: '/event/:id',
+    //   element: <ClientLayout children={<EventDetailPage />} />,
+    // },
     // {
     //   path: '/device',
     //   element: (
