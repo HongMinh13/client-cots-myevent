@@ -7,6 +7,8 @@ import { clearLocalStorage } from '#/shared/utils/token';
 import { ROLE } from '#/shared/utils/type';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { IconUser, IconList, IconLogout } from '@tabler/icons-react';
+import { MailOutlined } from '@ant-design/icons';
 // import CartIcon from './Cart';
 
 type MenuType = {
@@ -21,41 +23,34 @@ const userMenus: MenuType[] = [
   {
     key: 'my-profile',
     to: '/profile',
-    icon: <UserAccountSVG width={20} height={20} />,
+    icon: <IconUser width={20} height={20} />,
     title: 'Thông tin cá nhân',
     href: ['/user/profile'],
   },
   {
-    key: 'cart',
-    to: '/cart',
-    icon: <UserAccountSVG width={20} height={20} />,
-    title: 'Quản lý danh sách đăng kí',
-    href: ['/cart'],
-  },
-  {
     key: 'user-contract',
     to: '/contract-management',
-    icon: <UserAccountSVG width={20} height={20} />,
+    icon: <IconList width={20} height={20} />,
     title: 'Quản lý hợp đồng',
     href: ['/user/contract-management'],
   },
   {
     key: 'guest-invitation',
     to: '/guest-invitation',
-    icon: <UserAccountSVG width={20} height={20} />,
+    icon: <MailOutlined width={20} height={20} />,
     title: 'Quản lý thư mời',
     href: ['/user/guest-invitation'],
   },
   {
     key: 'change-password',
     to: '/change-password',
-    icon: <UserAccountSVG width={20} height={20} />,
+    icon: <IconUser width={20} height={20} />,
     title: 'Đổi mật khẩu',
     href: ['/user/change-password'],
   },
   {
     key: 'logout',
-    icon: <LogoutSVG width={20} height={20} />,
+    icon: <IconLogout width={20} height={20} />,
     title: 'Đăng xuất',
   },
 ];
@@ -120,10 +115,11 @@ function AccountInfo() {
                 label: (
                   <span
                     onClick={menu.to ? () => navigate(`${menu.to}`) : logout}
-                    className={`flex items-center gap-3  ${menu?.href?.includes(pathname)
-                      ? 'text-[rgb(249 115 22)]'
-                      : ''
-                      } text-2xl `}
+                    className={`flex items-center gap-3  ${
+                      menu?.href?.includes(pathname)
+                        ? 'text-[rgb(249 115 22)]'
+                        : ''
+                    } text-2xl `}
                   >
                     {menu?.href?.includes(pathname) && (
                       <div className="h-2 w-2 rounded-full" />
