@@ -120,7 +120,7 @@ export function MyGuestInvitation() {
 
   const logColumns = [
     {
-      title: 'STT',
+      title:  <span style={{ color: 'black' }}>STT</span>,
       key: 'index',
       render: (value: any, record: any, index: number) => (
         <Row>
@@ -134,7 +134,7 @@ export function MyGuestInvitation() {
       width: 80,
     },
     {
-      title: 'Tên file',
+      title:  <span style={{ color: 'black' }}>Tên file</span>,
       dataIndex: 'fileName',
       key: 'fileName',
       render: (value: string) => (
@@ -144,7 +144,7 @@ export function MyGuestInvitation() {
       ),
     },
     {
-      title: 'Số lượng khách mời',
+      title:  <span style={{ color: 'black' }}>Số lượng khách mời</span>,
       dataIndex: 'guests',
       key: 'totalEmail',
       render: (guests: GuestData[] | null) => (
@@ -156,7 +156,7 @@ export function MyGuestInvitation() {
       ),
     },
     {
-      title: 'Thời gian gửi',
+      title:  <span style={{ color: 'black' }}>Thời gian gửi</span>,
       dataIndex: 'createdAt',
       key: 'createdAt',
       render: (value: Date) => (
@@ -172,7 +172,7 @@ export function MyGuestInvitation() {
 
   const guestColumns: TableColumnsType<GuestData> = [
     {
-      title: 'STT',
+      title:  <span style={{ color: 'black' }}>STT</span>,
       key: 'index',
       render: (value: any, record: any, index: number) => (
         <Row>
@@ -181,7 +181,7 @@ export function MyGuestInvitation() {
       ),
     },
     {
-      title: 'Email',
+      title: <span style={{ color: 'Email' }}>STT</span>,
       dataIndex: 'email',
       key: 'email',
       render: (value: string) => (
@@ -191,7 +191,7 @@ export function MyGuestInvitation() {
       ),
     },
     {
-      title: 'Trạng thái',
+      title:  <span style={{ color: 'Trạng thái' }}>STT</span>,
       dataIndex: 'status',
       key: 'status',
       render: (value: string) => {
@@ -211,7 +211,7 @@ export function MyGuestInvitation() {
       },
     },
     {
-      title: 'Thời gian gửi',
+      title:  <span style={{ color: 'Thời gian gửi' }}>STT</span>,
       dataIndex: 'createdAt',
       key: 'createdAt',
       render: (value: Date) => (

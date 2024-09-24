@@ -3,7 +3,7 @@ import { Button } from 'antd';
 
 const PrimaryButton = styled(Button)`
   position: relative;
-  font-weight: 500;
+  font-weight: 700;
   background: #04b4bc;
   border: none;
   font-size: 1rem;
@@ -36,7 +36,7 @@ const PrimaryButton = styled(Button)`
   }
   &:hover {
     background: #04b4bc;
-    color: #fff;
+    color: black;
     &::after {
       filter: blur(0.5rem);
       background: #04b4bc
