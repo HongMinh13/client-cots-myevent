@@ -22,6 +22,8 @@ import {
     useGetEventByIdQuery,
 } from '#/generated/schemas';
 import { useState } from 'react';
+import CreateEvent3 from './CreateEvent3';
+import CreateEvent2 from './CreateEvent2';
 import CreateEvent4 from './CreateEvent4';
 import dayjs from 'dayjs';
 

@@ -52,8 +52,8 @@ import {
     }, [userProfile, form]);
   
     return (
-      <div className="mb-8 flex h-screen flex-col items-center justify-center gap-8 ">
-        <div className="${className} relative w-[40%] rounded-2xl bg-[#242424]  px-8 px-8 py-12 backdrop-blur-3xl md:w-full">
+      <div className="mb-8 flex h-screen flex-col items-center justify-center gap-8 bg-[url('https://i.ibb.co/99zGcN5/bg.png')]" >
+        <div className="${className} relative w-[40%] rounded-2xl bg-[#242424]  bg-opacity-20 px-8 px-8 py-12 backdrop-blur-3xl md:w-full">
           <Typography.Title
             className="mt-0 w-full py-3 text-center text-white"
             level={3}

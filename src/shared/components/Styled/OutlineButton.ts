@@ -4,12 +4,12 @@ import { Button } from 'antd';
 const OutlineButton = styled(Button)`
   position: relative;
   font-weight: 700;
-  background: #f90;
+  background: #04b4bc;
   border: none;
   font-size: 1rem;
   z-index: 1;
   padding: calc(0.2rem + 2px) 2.5rem;
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@ const OutlineButton = styled(Button)`
   &::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: -2px;
     bottom: 0;
     left: 0;
     right: 0;
