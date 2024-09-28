@@ -18,6 +18,7 @@ import MyContractDetail from '#/pages/Client/Contract/ContractDetail';
 import ChangePassword from '#/pages/Client/Profile/ChangePassword';
 import { MyGuestInvitation } from '#/pages/Client/GuestInvitation';
 import { EventDetailPage } from '#/pages/Client/event/EventDetail';
+import { DevicePageStyles, Service } from '#/pages/Client/Service';
 
 const App = () => {
   const routes = useRoutes([
@@ -73,11 +74,11 @@ const App = () => {
       path: '/event/:id',
       element: <ClientLayout children={<EventDetailPage />} />,
     },
-    // {
-    //   path: '/device',
-    //   element: (
-    //     <ClientLayout children={<Service type={ServiceType.Device} />} />
-    //   ),
+    {
+      path: '/device',
+      element:
+        <ClientLayout children={<DevicePageStyles />} />,
+    },
     // },
     // {
     //   path: '/device/:id',
