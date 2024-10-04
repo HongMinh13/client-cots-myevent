@@ -25,13 +25,7 @@ const userMenus: MenuType[] = [
     title: 'Thông tin cá nhân',
     href: ['/user/profile'],
   },
-  {
-    key: 'cart',
-    to: '/cart',
-    icon: <UserAccountSVG width={20} height={20} />,
-    title: 'Quản lý danh sách đăng kí',
-    href: ['/cart'],
-  },
+ 
   {
     key: 'user-contract',
     to: '/contract-management',

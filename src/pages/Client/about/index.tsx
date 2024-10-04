@@ -67,31 +67,6 @@ export function AboutPage() {
   const { currentPage, pageSize, setCurrentPage } = usePagination({
     defaultPageSize: 12,
   });
-  // const { data: eventsData, loading } = useGetEventsQuery({
-  //   variables: {
-  //     queryParams: {
-  //       filters: [
-  //         {
-  //           field: 'Event.name',
-  //           data: search,
-  //           operator: QueryOperator.Like,
-  //         },
-  //         {
-  //           field: 'Event.is_public',
-  //           data: 'true',
-  //           operator: QueryOperator.Eq,
-  //         },
-  //       ],
-  //       limit: pageSize,
-  //       page: currentPage,
-  //       orderBy: 'Event.createdAt:DESC',
-  //     },
-  //   },
-  //   onError(error) {
-  //     showError(error);
-  //   },
-  // });
-
   const events = {
     getEvents: {
       items: [
