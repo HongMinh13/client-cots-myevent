@@ -525,7 +525,7 @@ import {
   
     const deviceColumn = [
       {
-        title: 'Tên thiết bị',
+        title: <span style={{ color: 'black' }}>Tên thiết bị</span>,
         dataIndex: 'name',
         key: 'name',
         render: (text: any, record: any) => (
@@ -535,7 +535,7 @@ import {
         ),
       },
       {
-        title: 'Hình ảnh',
+        title: <span style={{ color: 'black' }}>Hình ảnh</span>,
         dataIndex: 'img',
         key: 'image',
         render: (img: string) => (
@@ -543,7 +543,7 @@ import {
         ),
       },
       {
-        title: 'Mô tả',
+        title: <span style={{ color: 'black' }}>Mô tả</span>,
         dataIndex: 'description',
         key: 'description',
         render: (text: any, record: any) => (
@@ -553,7 +553,7 @@ import {
         ),
       },
       {
-        title: 'Số lượng',
+        title: <span style={{ color: 'black' }}>Số lượng</span>,
         dataIndex: 'quantity',
         key: 'quanity',
         render: (quantity: number) => (
@@ -561,7 +561,7 @@ import {
         ),
       },
       {
-        title: 'Đơn giá / ngày',
+        title: <span style={{ color: 'black' }}>Đơn giá / ngày</span>,
         dataIndex: 'hourlyRentalFee',
         key: 'hourlyRentalFee',
         render: (hourlyRentalFee: number) => (
@@ -571,7 +571,7 @@ import {
         ),
       },
       {
-        title: 'Thành tiền',
+        title: <span style={{ color: 'black' }}>Thành tiền</span>,
   
         key: 'totalPrice',
         render: (row: DeviceData) => (
@@ -586,7 +586,7 @@ import {
   
     const humanResourceColumn = [
       {
-        title: 'Tên loại hình',
+        title: <span style={{ color: 'black' }}>Tên loại hình</span>,
         dataIndex: 'name',
         key: 'name',
         render: (text: any, record: any) => (
@@ -596,7 +596,7 @@ import {
         ),
       },
       {
-        title: 'Hình ảnh',
+        title: <span style={{ color: 'black' }}>Hình ảnh</span>,
         dataIndex: 'img',
         key: 'image',
         render: (img: string) => (
@@ -604,7 +604,7 @@ import {
         ),
       },
       {
-        title: 'Mô tả',
+        title: <span style={{ color: 'black' }}>Mô tả</span>,
         dataIndex: 'description',
         key: 'description',
         render: (text: any, record: any) => (
@@ -614,7 +614,7 @@ import {
         ),
       },
       {
-        title: 'Số lượng',
+        title: <span style={{ color: 'black' }}>Số lượng</span>,
         dataIndex: 'quantity',
         key: 'quanity',
         render: (quantity: number) => (
@@ -622,7 +622,7 @@ import {
         ),
       },
       {
-        title: 'Đơn giá / ngày',
+        title: <span style={{ color: 'black' }}>Đơn giá / ngày</span>,
         dataIndex: 'hourlySalary',
         key: 'hourlySalary',
         render: (hourlyRentalFee: number) => (
@@ -632,7 +632,7 @@ import {
         ),
       },
       {
-        title: 'Thành tiền',
+        title: <span style={{ color: 'black' }}>Thành tiền</span>,
   
         key: 'totalPrice',
         render: (row: HumanResourceData) => (
@@ -645,7 +645,7 @@ import {
   
     const locationColumn = [
       {
-        title: 'Tên địa điểm',
+        title: <span style={{ color: 'black' }}>Tên địa điểm</span>,
         dataIndex: 'name',
         key: 'name',
         render: (text: any, record: any) => (
@@ -655,7 +655,7 @@ import {
         ),
       },
       {
-        title: 'Địa chỉ',
+        title: <span style={{ color: 'black' }}>Địa điểm</span>,
         dataIndex: 'address',
         key: 'address',
         render: (text: any, record: any) => (
@@ -665,7 +665,7 @@ import {
         ),
       },
       {
-        title: 'Hình ảnh',
+        title: <span style={{ color: 'black' }}>Hình ảnh</span>,
         dataIndex: 'img',
         key: 'image',
         render: (img: string) => (
@@ -673,7 +673,7 @@ import {
         ),
       },
       {
-        title: 'Mô tả',
+        title: <span style={{ color: 'black' }}>Mô tả</span>,
         dataIndex: 'description',
         key: 'description',
         render: (text: any, record: any) => (
@@ -684,7 +684,7 @@ import {
       },
   
       {
-        title: 'Đơn giá / ngày',
+        title: <span style={{ color: 'black' }}>Đơn giá / ngày</span>,
         dataIndex: 'hourlyRentalFee',
         key: 'hourlyRentalFee',
         render: (hourlyRentalFee: number) => (
@@ -694,7 +694,7 @@ import {
         ),
       },
       {
-        title: 'Thành tiền',
+        title: <span style={{ color: 'black' }}>Thành tiền</span>,
   
         key: 'totalPrice',
         render: (row: LocationData) => (

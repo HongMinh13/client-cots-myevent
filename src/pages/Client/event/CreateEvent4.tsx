@@ -364,7 +364,7 @@ const ContractModal: React.FC<Props> = ({ event }: Props) => {
   };
 
   const disabledDate = (current: Moment) => {
-    return current < moment().add(14, 'days');
+    return current < moment().add(13, 'days');
   };
 
   // device data
@@ -518,6 +518,175 @@ const ContractModal: React.FC<Props> = ({ event }: Props) => {
           }}
         >
           <Row gutter={[16, 16]} className={'flex w-full'}>
+            
+            
+
+            <Col
+              lg={24}
+              md={24}
+              className={
+                'my-4 rounded-md border-[1px] border-solid border-[#ccc] p-4 shadow-lg'
+              }
+            >
+              <div className="border-l pl-4">
+                <Row>
+                  <Typography.Title level={4}>
+                    Thông tin hợp đồng
+                  </Typography.Title>
+                </Row>
+                <Row>
+                  <Form.Item label="Tên hợp đồng" required>
+                    <Controller
+                      control={control}
+                      rules={{ required: 'Vui lòng nhập tên hợp đồng' }}
+                      name="contractDetails.contractName"
+                      render={({ field }) => <Input {...field} />}
+                    />
+                  </Form.Item>
+                  <Form.Item label="Địa chỉ tổ chức" required>
+                    <Controller
+                      control={control}
+                      name="contractDetails.useCompanyLocation"
+                      render={({ field }) => (
+                        <Radio.Group {...field}>
+                          <Radio value={true}>
+                            Sử dụng địa điểm tổ chức do công ty chúng tôi cung
+                            cấp
+                          </Radio>
+                          <Radio value={false}>
+                            Sử dụng địa điểm tổ chức của bạn
+                          </Radio>
+                        </Radio.Group>
+                      )}
+                    />
+                  </Form.Item>
+                  {watch('contractDetails.useCompanyLocation') ? (
+                    <Form.Item>
+                      <Controller
+                        control={control}
+                        name="contractDetails.selectedLocation"
+                        render={({ field }) => (
+                          <Select
+                            {...field}
+                            style={{ width: '100%' }}
+                            onSelect={(value: string) => {
+                              setSelectedLocationPrice(
+                                locations.find(
+                                  location => location.id === value,
+                                )?.hirePrice || 0,
+                              );
+                              return value;
+                            }}
+                          >
+                            {locations.map(location => (
+                              <Option key={location.id} value={location.id}>
+                                <div className="flex justify-between">
+                                  <div className="my-2 align-middle text-base">
+                                    {location.name} <i>({location.address})</i>
+                                  </div>
+                                  <div className="my-2 align-middle text-base">
+                                    {formatCurrency(location.hirePrice)} / ngày
+                                  </div>
+                                </div>
+                              </Option>
+                            ))}
+                          </Select>
+                        )}
+                      />
+                    </Form.Item>
+                  ) : (
+                    <Form.Item>
+                      <Controller
+                        control={control}
+                        name="contractDetails.customLocation"
+                        render={({ field }) => <AddressForm {...field} />}
+                      />
+                    </Form.Item>
+                  )}
+                  <Form.Item label="Thời gian tổ chức" required>
+                    <Controller
+                      control={control}
+                      name="contractDetails.orgTime"
+                      rules={{ required: 'Vui lòng chọn thời gian tổ chức' }}
+                      render={({ field }) => (
+                        <DatePicker.RangePicker
+                          {...field}
+                          picker="date"
+                          format="YYYY-MM-DD"
+                          style={{ width: '100%' }}
+                          defaultValue={[moment(), moment().add(1, 'day')]}
+                          disabledDate={disabledDate}
+                          onChange={value => {
+                            if (value) {
+                              const [startTime, endTime] = value;
+                              if (startTime && endTime) {
+                                setValue('contractDetails.orgTime', value);
+                              }
+                            }
+                          }}
+                        />
+                      )}
+                    />
+                  </Form.Item>
+                  <Form.Item label="Tên khách hàng" required>
+                    <Controller
+                      control={control}
+                      rules={{ required: 'Vui lòng nhập họ tên' }}
+                      name="contractDetails.customerName"
+                      render={({ field }) => <Input {...field} />}
+                    />
+                  </Form.Item>
+                  <Form.Item
+                    label="Số điện thoại"
+                    required
+                    rules={[
+                      {
+                        required: true,
+                        type: 'string',
+                        pattern: new RegExp(/(84|0[3|5|7|8|9])+([0-9]{8})\b/),
+                        message: 'Vui lòng nhập số điện thoại hợp lệ',
+                      },
+                    ]}
+                  >
+                    <Controller
+                      control={control}
+                      rules={{ required: 'Vui lòng nhập số điện thoại' }}
+                      name="contractDetails.phoneNumber"
+                      render={({ field }) => <Input {...field} />}
+                    />
+                  </Form.Item>
+                  <Form.Item label="Địa chỉ khách hàng" required>
+                    <Controller
+                      control={control}
+                      name="contractDetails.customerAddress"
+                      rules={{ required: 'Vui lòng nhập địa chỉ khách hàng' }}
+                      render={({ field }) => <AddressForm {...field} />}
+                    />
+                  </Form.Item>
+                  <Form.Item label="Ngày tạo hợp đồng">
+                    <Controller
+                      control={control}
+                      name="contractDetails.creationDate"
+                      render={({ field }) => <Input {...field} disabled />}
+                    />
+                  </Form.Item>
+                </Row>
+              </div>
+            </Col>
+            <Col
+              span={24}
+              className={
+                'my-4 rounded-md border-[1px] border-solid border-[#ccc] p-4 shadow-lg'
+              }
+            >
+              <Form.Item name={'timeline'}>
+                <DynamicTimeLine
+                  form={form}
+                  startDate={watchDate?.[0]?.toDate()}
+                  endDate={watchDate?.[1]?.toDate()}
+                />
+              </Form.Item>
+            </Col>
             <Col
               lg={24}
               md={24}
@@ -1046,173 +1215,6 @@ const ContractModal: React.FC<Props> = ({ event }: Props) => {
                       </span>
                     </div>
                   </Col>
-                </Row>
-              </div>
-            </Col>
-            <Col
-              span={24}
-              className={
-                'my-4 rounded-md border-[1px] border-solid border-[#ccc] p-4 shadow-lg'
-              }
-            >
-              <Form.Item name={'timeline'}>
-                <DynamicTimeLine
-                  form={form}
-                  startDate={watchDate?.[0]?.toDate()}
-                  endDate={watchDate?.[1]?.toDate()}
-                />
-              </Form.Item>
-            </Col>
-
-            <Col
-              lg={24}
-              md={24}
-              className={
-                'my-4 rounded-md border-[1px] border-solid border-[#ccc] p-4 shadow-lg'
-              }
-            >
-              <div className="border-l pl-4">
-                <Row>
-                  <Typography.Title level={4}>
-                    Thông tin hợp đồng
-                  </Typography.Title>
-                </Row>
-                <Row>
-                  <Form.Item label="Tên hợp đồng" required>
-                    <Controller
-                      control={control}
-                      rules={{ required: 'Vui lòng nhập tên hợp đồng' }}
-                      name="contractDetails.contractName"
-                      render={({ field }) => <Input {...field} />}
-                    />
-                  </Form.Item>
-                  <Form.Item label="Địa chỉ tổ chức" required>
-                    <Controller
-                      control={control}
-                      name="contractDetails.useCompanyLocation"
-                      render={({ field }) => (
-                        <Radio.Group {...field}>
-                          <Radio value={true}>
-                            Sử dụng địa điểm tổ chức do công ty chúng tôi cung
-                            cấp
-                          </Radio>
-                          <Radio value={false}>
-                            Sử dụng địa điểm tổ chức của bạn
-                          </Radio>
-                        </Radio.Group>
-                      )}
-                    />
-                  </Form.Item>
-                  {watch('contractDetails.useCompanyLocation') ? (
-                    <Form.Item>
-                      <Controller
-                        control={control}
-                        name="contractDetails.selectedLocation"
-                        render={({ field }) => (
-                          <Select
-                            {...field}
-                            style={{ width: '100%' }}
-                            onSelect={(value: string) => {
-                              setSelectedLocationPrice(
-                                locations.find(
-                                  location => location.id === value,
-                                )?.hirePrice || 0,
-                              );
-                              return value;
-                            }}
-                          >
-                            {locations.map(location => (
-                              <Option key={location.id} value={location.id}>
-                                <div className="flex justify-between">
-                                  <div className="my-2 align-middle text-base">
-                                    {location.name} <i>({location.address})</i>
-                                  </div>
-                                  <div className="my-2 align-middle text-base">
-                                    {formatCurrency(location.hirePrice)} / ngày
-                                  </div>
-                                </div>
-                              </Option>
-                            ))}
-                          </Select>
-                        )}
-                      />
-                    </Form.Item>
-                  ) : (
-                    <Form.Item>
-                      <Controller
-                        control={control}
-                        name="contractDetails.customLocation"
-                        render={({ field }) => <AddressForm {...field} />}
-                      />
-                    </Form.Item>
-                  )}
-                  <Form.Item label="Thời gian tổ chức" required>
-                    <Controller
-                      control={control}
-                      name="contractDetails.orgTime"
-                      rules={{ required: 'Vui lòng chọn thời gian tổ chức' }}
-                      render={({ field }) => (
-                        <DatePicker.RangePicker
-                          {...field}
-                          picker="date"
-                          format="YYYY-MM-DD"
-                          style={{ width: '100%' }}
-                          defaultValue={[moment(), moment().add(1, 'day')]}
-                          disabledDate={disabledDate}
-                          onChange={value => {
-                            if (value) {
-                              const [startTime, endTime] = value;
-                              if (startTime && endTime) {
-                                setValue('contractDetails.orgTime', value);
-                              }
-                            }
-                          }}
-                        />
-                      )}
-                    />
-                  </Form.Item>
-                  <Form.Item label="Tên khách hàng" required>
-                    <Controller
-                      control={control}
-                      rules={{ required: 'Vui lòng nhập họ tên' }}
-                      name="contractDetails.customerName"
-                      render={({ field }) => <Input {...field} />}
-                    />
-                  </Form.Item>
-                  <Form.Item
-                    label="Số điện thoại"
-                    required
-                    rules={[
-                      {
-                        required: true,
-                        type: 'string',
-                        pattern: new RegExp(/(84|0[3|5|7|8|9])+([0-9]{8})\b/),
-                        message: 'Vui lòng nhập số điện thoại hợp lệ',
-                      },
-                    ]}
-                  >
-                    <Controller
-                      control={control}
-                      rules={{ required: 'Vui lòng nhập số điện thoại' }}
-                      name="contractDetails.phoneNumber"
-                      render={({ field }) => <Input {...field} />}
-                    />
-                  </Form.Item>
-                  <Form.Item label="Địa chỉ khách hàng" required>
-                    <Controller
-                      control={control}
-                      name="contractDetails.customerAddress"
-                      rules={{ required: 'Vui lòng nhập địa chỉ khách hàng' }}
-                      render={({ field }) => <AddressForm {...field} />}
-                    />
-                  </Form.Item>
-                  <Form.Item label="Ngày tạo hợp đồng">
-                    <Controller
-                      control={control}
-                      name="contractDetails.creationDate"
-                      render={({ field }) => <Input {...field} disabled />}
-                    />
-                  </Form.Item>
                 </Row>
               </div>
             </Col>
