@@ -109,7 +109,7 @@ export function EventDetailPage() {
 
     const deviceColumn = [
         {
-            title: 'Tên thiết bị',
+            title: <span style={{ color: 'black' }}>Tên thiết bị</span>,
             dataIndex: 'name',
             key: 'name',
             render: (text: any, record: any) => (
@@ -119,7 +119,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Hình ảnh',
+            title: <span style={{ color: 'black' }}>Hình ảnh</span>,
             dataIndex: 'img',
             key: 'image',
             render: (img: string) => (
@@ -127,7 +127,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Mô tả',
+            title: <span style={{ color: 'black' }}>Mô tả</span>,
             dataIndex: 'description',
             key: 'description',
             render: (text: string) => (
@@ -135,7 +135,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Số lượng',
+            title: <span style={{ color: 'black' }}>Số lượng</span>,
             dataIndex: 'quantity',
             key: 'quantity',
             render: (quantity: number) => (
@@ -143,7 +143,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Đơn giá / ngày',
+            title: <span style={{ color: 'black' }}>Đơn giá / ngày</span>,
             dataIndex: 'hourlyRentalFee',
             key: 'hourlyRentalFee',
             render: (hourlyRentalFee: number) => (
@@ -156,7 +156,7 @@ export function EventDetailPage() {
 
     const humanResourceColumn = [
         {
-            title: 'Tên loại hình',
+            title: <span style={{ color: 'black' }}>Tên loại hình</span>,
             dataIndex: 'name',
             key: 'name',
             render: (text: any, record: any) => (
@@ -166,7 +166,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Hình ảnh',
+            title: <span style={{ color: 'black' }}>Hình ảnh</span>,
             dataIndex: 'img',
             key: 'image',
             render: (img: string) => (
@@ -174,7 +174,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Mô tả',
+            title: <span style={{ color: 'black' }}>Mô tả</span>,
             dataIndex: 'description',
             key: 'description',
             render: (text: string) => (
@@ -182,7 +182,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Số lượng',
+            title: <span style={{ color: 'black' }}>Số lượng</span>,
             dataIndex: 'quantity',
             key: 'quantity',
             render: (quantity: number) => (
@@ -190,7 +190,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Đơn giá / ngày',
+            title: <span style={{ color: 'black' }}>Đơn giá / ngày</span>,
             dataIndex: 'hourlySalary',
             key: 'hourlySalary',
             render: (hourlyRentalFee: number) => (
@@ -203,7 +203,7 @@ export function EventDetailPage() {
 
     const locationColumn = [
         {
-            title: 'Tên địa điểm',
+            title: <span style={{ color: 'black' }}>Tên địa điểm</span>,
             dataIndex: 'name',
             key: 'name',
             render: (text: any, record: any) => (
@@ -213,7 +213,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Địa chỉ',
+            title: <span style={{ color: 'black' }}>Địa chỉ</span>,
             dataIndex: 'address',
             key: 'address',
             render: (text: any, record: any) => (
@@ -223,7 +223,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Hình ảnh',
+            title: <span style={{ color: 'black' }}>Hình ảnh</span>,
             dataIndex: 'img',
             key: 'image',
             render: (img: string) => (
@@ -231,7 +231,7 @@ export function EventDetailPage() {
             ),
         },
         {
-            title: 'Mô tả',
+            title: <span style={{ color: 'black' }}>Mô tả</span>,
             dataIndex: 'description',
             key: 'description',
             render: (text: string) => (
@@ -240,7 +240,7 @@ export function EventDetailPage() {
         },
 
         {
-            title: 'Đơn giá / ngày',
+            title: <span style={{ color: 'black' }}>Đơn giá / ngày</span>,
             dataIndex: 'hourlyRentalFee',
             key: 'hourlyRentalFee',
             render: (hourlyRentalFee: number) => (
